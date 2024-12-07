@@ -1,0 +1,420 @@
+<html><head><base href=""><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>توص | خدمة توصيل جميع الطلبات</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transform: scale(0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.02); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+.logo {
+    font-size: 3.8em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+body {
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #1976D2, #0D47A1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px 100px;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    background: white;
+    bottom: -100px;
+    left: -50%;
+    border-radius: 50%;
+}
+
+.header h2 {
+    color: white;
+    font-size: 1.8em;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1976D2;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: white;
+    border: 2px solid #1976D2;
+    white-space: nowrap;
+}
+
+.contact-info a:hover {
+    background: #1976D2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-info a:hover svg {
+    fill: white;
+}
+
+.contact-info svg {
+    width: 24px;
+    height: 24px;
+    fill: #1976D2;
+    transition: fill 0.3s ease;
+}
+
+.cta-button {
+    background: #FFC107;
+    color: #333;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: #FFD700;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #2196F3, #3F51B5);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.features {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.price-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.price-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-buttons {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.contact-button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.phone {
+    background: #2196F3;
+}
+
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .logo { font-size: 3em; }
+    .header h2 { font-size: 1.4em; }
+    .services { padding: 40px 15px; }
+    .contact-buttons {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .logo-container {
+        padding: 15px;
+    }
+    .logo-img {
+        width: 100px;
+    }
+    .contact-info {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .contact-info a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.Top-title{
+    color: aliceblue;
+}
+</style></head><body>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="لةتوص" class="logo-img">
+    </div>
+
+    <div class="Top-title">
+
+    <h1> توصيله لخدمات التوصيل</h1>
+    <h2>خدمة توصيل احترافية تصل إليك أينما كنت</h2>
+</div>
+    <div class="contact-info">
+        <a href="tel:+971553708870">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+            **********9715+
+        </a>
+        <a href="https://wa.me/+971553708870">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM8.46 14.45l-1.36.07.93-1.38c.24-.35.39-.78.39-1.24 0-.58-.25-1.11-.65-1.48.38-.95 1.02-1.76 1.85-2.32.89-.6 1.94-.93 3.02-.93 1.59 0 3.02.69 4 1.78 1 1.09 1.61 2.59 1.61 4.24 0 3.03-2.47 5.5-5.5 5.5-1.13 0-2.18-.34-3.05-.93-.87-.59-1.56-1.42-1.97-2.41z"/>
+            </svg>
+            واتساب
+        </a>
+    </div>
+    
+    <a href="https://wa.me/+971553708870" class="cta-button">احصل على خدمة التوصيل الآن</a>
+</header>
+
+<section class="services">
+    <div class="service-card">
+        <svg class="icon animated-icon" viewBox="0 0 24 24" fill="#2196F3">
+            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <h3>توصيل سريع وفعال</h3>
+        <p>نصل إليك في أسرع وقت مع ضمان جودة الخدمة</p>
+    </div>
+
+    <div class="service-card">
+        <svg class="icon animated-icon" viewBox="0 0 24 24" fill="#3F51B5">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+        </svg>
+        <h3> تابع طلباتك </h3>
+        <p>راقب طلبك خطوة بخطوة حتى يصل إليك</p>
+    </div>
+
+    <div class="service-card">
+        <svg class="icon animated-icon" viewBox="0 0 24 24" fill="#4CAF50">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        <h3>ضمان وأمان</h3>
+        <p>نضمن وصول طلبك بأمان </p>
+    </div>
+</section>
+
+<section class="features">
+    <h2>لماذا تختار توصيبة ؟</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>تغطية شاملة</h3>
+            <p>خدماتنا متوفرة في جميع أنحاء المدينة</p>
+        </div>
+        <div class="service-card">
+            <h3>أسعار منافسة</h3>
+            <p>أفضل الأسعار مع خدمة لا مثيل لها</p>
+        </div>
+        <div class="service-card">
+            <h3>دعم متواصل</h3>
+            <p>فريق متخصص في خدمتك على مدار الساعة</p>
+        </div>
+    </div>
+</section>
+
+<section class="price-section">
+    <h2>باقاتنا وأسعارنا</h2>
+    <p>أسعار تنافسية تبدأ من 25 درهم للتوصيل داخل المدينة</p>
+    <p>عروض خاصة للشركات والمتاجر</p>
+    <a href="https://wa.me/+971553708870" class="cta-button">احصل على عرض سعر خاص</a>
+</section>
+
+<div class="contact-buttons">
+    <a href="https://wa.me/+971553708870" class="contact-button whatsapp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+        </svg>
+        تواصل واتساب
+    </a>
+    <a href="+971553708870" class="contact-button phone">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+        </svg>
+        اتصل بنا
+    </a>
+</div>
+
+<footer class="footer">
+    <p>جميع الحقوق محفوظة © 2024 توصيلة للتوصيل السريع</p>
+</footer>
+
+</body></html>
